@@ -9,6 +9,8 @@ import {
   Image,
 } from 'react-native';
 
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 import Accordion from 'react-native-collapsible/Accordion';
 
 const SECTIONS = [
@@ -49,6 +51,8 @@ export default class Sidebar extends Component {
        <View style={styles.content}>
          {section.content.map((item, key) => (
            <TouchableOpacity key={key} style={styles.contentWrapper}>
+             <Icon name="facebook" color="#fff" />
+
              <Text  style={styles.contentText}>{item}</Text>
            </TouchableOpacity>
          ))}
